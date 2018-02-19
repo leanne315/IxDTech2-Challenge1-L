@@ -58,8 +58,8 @@
 
             var data = google.visualization.arrayToDataTable([
               ['Stock', 'Amount left', { role: 'style' }],
-              ['Water', 60, '#55AAEE'],
-              ['Food', 80, '#D0A090'],
+              ['Water', 60, 'skyblue'],
+              ['Food', 80, 'red'],
             ]);
 
             var options = {
@@ -146,26 +146,27 @@
     </script>
   </head>
   <body>
-    <div id="logo">
-      <img src="styles/SpaceX-Logo25.png">
-    </div>
-    <div id="titel">
-      <h1>Vehicle information</h1>
-    </div>
-    <div id="gaugechart_div" style="width: 400px; height: 120px;"></div>
+    <div class="grid">
+      <div id="logo">
+        <img src="styles/SpaceX-Logo100.png">
+      </div>
+      <div id="titel">
+        <h1>Vehicle information</h1>
+      </div>
+      <div id="gaugechart_div" style="width: 400px; height: 120px;"></div>
 
-    <div id="titel">
-      <h1>Stocks</h1>
+      <div id="titel">
+        <h1>Stocks</h1>
+      </div>
+      <div id="barchart_div" style="width: 400px; height: 120px;"></div>
+
+      <div id="titel">
+        <h1>Vehicle environment</h1>
+      </div>
+      <div id="gravchart_div" style="width: 400px; height: 120px;"></div>
+
+      <div id="afstandchart_div" style="width: 400px; height: 120px;"></div>
     </div>
-    <div id="barchart_div" style="width: 400px; height: 120px;"></div>
-
-    <div id="titel">
-      <h1>Vehicle environment</h1>
-    </div>
-    <div id="gravchart_div" style="width: 400px; height: 120px;"></div>
-
-    <div id="afstandchart_div" style="width: 400px; height: 120px;"></div>
-
 
 
 

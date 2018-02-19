@@ -3,8 +3,15 @@
   margin: 5px 5px 5px 5px;
 }
 
+.grid {
+    padding: 10px 10px;
+    display: grid;
+		grid-row-gap: 10px;
+    grid-template-columns: 1fr;
+}
+
 #titel{
-  color: white;
+  color: #8aa080;
   font-family: 'Titillium Web', sans-serif;
   display: flex;
   flex-flow: column;

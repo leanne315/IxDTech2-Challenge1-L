@@ -143,31 +143,6 @@
                     chart.draw(data, options);
                   }
 
-<!--Bar chart for atmosphere-->
-                  function drawAtmosfeerBarChart() {
-
-                        var data = google.visualization.arrayToDataTable([
-                          ['Surrounding', 'Amount', { role: 'style' }],
-                          ['Atmosphere', 100, '#80CC80'],
-                        ]);
-
-                        var options = {
-                          width: 800, height: 240,
-                          title: 'Atmosphere',
-                          chartArea: {width: '50%'},
-                          hAxis: {
-                            title: 'Atmosphere in %',
-                            minValue: 0
-                          },
-                          vAxis: {
-                            title: 'Surrounding'
-                          }
-                        };
-
-                        var chart = new google.visualization.BarChart(document.getElementById('atmosfeerchart_div'));
-
-                        chart.draw(data, options);
-                      }
     </script>
   </head>
   <body>
@@ -191,7 +166,6 @@
 
     <div id="afstandchart_div" style="width: 400px; height: 120px;"></div>
 
-    <div id="atmosfeerchart_div" style="width: 400px; height: 120px;"></div>
 
 
 

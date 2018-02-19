@@ -1,0 +1,35 @@
+*{
+  background-color: black;
+  margin: 5px 5px 5px 5px;
+}
+
+#titel{
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+#gaugechart_div{
+  margin-bottom: 150px;
+}
+
+#chart_div{
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+}
+
+#barchart_div{
+  color: white;
+  margin-bottom: 150px;
+}
+
+#gravchart_div{
+  margin-bottom: 150px;
+}
+
+#afstandchart_div{
+  margin-bottom: 150px;
+}

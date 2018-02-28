@@ -1,0 +1,58 @@
+*{
+  background-color: white;
+}
+
+/*Mobile first designen*/
+.container{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+/*mobile*/
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 719px){
+    .container{
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+    #demo{
+      font-size: 20px;
+    }
+  }
+
+/*tablet*/
+@media only screen
+  and (min-device-width: 720px)
+  and (max-device-width: 1023px){
+    .container{
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+    #demo{
+      font-size: 40px;
+    }
+  }
+
+/*desktop en groter*/
+@media only screen
+  and (max-device-width: 1024px){
+    .container{
+      display: flex;
+      justify-content: flex-start;
+    }
+    #demo{
+      font-size: 60px;
+    }
+  }
+
+#demo{
+  font-size: 60px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Source Code Pro', monospace;
+}

@@ -2,12 +2,12 @@
   background-color: white;
 }
 
-/*Mobile first designen*/
+/*Mobile first designen
 .container{
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-}
+}*/
 
 /*mobile*/
 @media only screen
@@ -48,6 +48,47 @@
       font-size: 60px;
     }
   }
+
+.grid {
+  display: grid;
+  width: 100%;
+  max-width: 719px;
+  margin: 0 auto;
+
+  grid-template-columns: repeat(, 1fr);
+  grid-template-rows: 80px auto 80px;
+  grid-gap: 20px;
+
+  grid-template-areas: "stocks   fuel"
+                       "counter  counter";
+}
+
+/* items */
+
+.grid div {
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+}
+
+/* specific item styles */
+
+.barChart {
+  background: #b03532;
+  grid-area: stocks;
+}
+.dChart {
+  background: #33a8a5;
+  grid-area: fuel;
+}
+.count {
+  background: #30997a;
+  grid-area: counter;
+}
+/*.count {
+  background: #6a478f;
+  grid-area: counter;
+}*/
 
 #demo{
   font-size: 60px;

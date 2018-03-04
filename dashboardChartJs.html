@@ -3,19 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Challenge 1 SpaceX</title>
-    <link rel="stylesheet" href="styles/dashboardChartJs.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:900" rel="stylesheet">
+    <title>Challenge 1</title>
+    <link rel="stylesheet" href="styles/dahsboardChartJs.css">
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Source+Code+Pro:900" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   </head>
   <body>
     <section class="grid">
-        <div class="barChart"><canvas id="bar-chart-1" width="400" height="225"></canvas></div>
-        <div class="dChart"><canvas id="doughnut-chart" width="400" height="225"></canvas></div>
-        <div class="count"><div id="demo"></div>
+      <div class="item-1"><img src="styles/SpaceX-Logo25.png"></div>
+      <div class="item-2">
+        <h1>Stocks</h1>
+        <canvas id="bar-chart-1"></canvas>
+      </div>
+
+      <div class="item-3">
+        <h1>Vehicle Info</h1>
+        <canvas id="doughnut-chart"></canvas>
+      </div>
+
+      <div class="item-4"><h1>Time until arrivation</h1></div>
+      <div class="item-5"><h1>Time until arrivation</h1><div id="countDown"></div></div>
+
     </section>
 
     <script>
+
       // Bar chart
       new Chart(document.getElementById("bar-chart-1"), {
           type: 'bar',
@@ -24,7 +36,7 @@
             datasets: [
               {
                 label: "Amount left",
-                backgroundColor: ["#44BBFF", "#80B660"],
+                backgroundColor: ["#11DFFF", "#A0FFCC"],
                 data: [2478,5267]
               }
             ]
@@ -33,54 +45,57 @@
             legend: { display: false },
             title: {
               display: true,
-              text: 'Stocks (amount)'
+              text: 'Stocks (amount)',
+              fontColor: 'white'
             }
           }
         });
 
-        new Chart(document.getElementById("doughnut-chart"), {
-            type: 'doughnut',
-            data: {
-                  labels: ["Fuel", "Empty"],
-                  datasets: [
-                    {
-                      label: "Fuel (Liters)",
-                      backgroundColor: ["#FFCC00", "white"],
-                      data: [95,5]
-                    }
-                  ]
-                },
-                options: {
-                  title: {
-                    display: true,
-                    text: 'Vehicle Information (Liters)'
+      //Doughnut chart
+      new Chart(document.getElementById("doughnut-chart"), {
+          type: 'doughnut',
+          data: {
+                labels: ["Fuel", "Empty"],
+                datasets: [
+                  {
+                    label: "Fuel (Liters)",
+                    backgroundColor: ["#FFCC00", "white"],
+                    data: [95,5]
                   }
+                ]
+              },
+              options: {
+                title: {
+                  display: true,
+                  text: 'Vehicle Information (Liters)',
+                  fontColor: 'white'
                 }
-            });
-
-        // Count down
-          var countDownDate = new Date("March 4, 2030 15:37:25").getTime();
-
-          var x = setInterval(function() {
-
-          var now = new Date().getTime();
-
-          var distance = countDownDate - now;
-
-          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-          document.getElementById("demo").innerHTML = days + " days " + hours + "hours "
-          + minutes + "min " + seconds + "sec ";
-
-              // If the count down is over, write some text
-              if (distance < 0) {
-                  clearInterval(x);
-                  document.getElementById("demo").innerHTML = "EXPIRED";
               }
-          }, 1000);
-        </script>
-    </body>
+          });
+
+      // Count down
+        var countDownDate = new Date("March 4, 2030 15:37:25").getTime();
+
+        var x = setInterval(function() {
+
+        var now = new Date().getTime();
+
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("countDown").innerHTML = days + " days " + hours + "hours "
+        + minutes + "min " + seconds + "sec ";
+
+            // If the count down is over, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countDown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+  </body>
 </html>

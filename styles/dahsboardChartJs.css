@@ -1,96 +1,56 @@
-*{
-  background-color: white;
+body {
+  padding-top: 20px;
 }
-
-/*Mobile first designen
-.container{
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-}*/
-
-/*mobile*/
-@media only screen
-  and (min-device-width: 375px)
-  and (max-device-width: 719px){
-    .container{
-      display: flex;
-      justify-content: flex-start;
-      flex-direction: column;
-    }
-    #demo{
-      font-size: 20px;
-    }
-  }
-
-/*tablet*/
-@media only screen
-  and (min-device-width: 720px)
-  and (max-device-width: 1023px){
-    .container{
-      display: flex;
-      justify-content: flex-start;
-      flex-direction: column;
-    }
-    #demo{
-      font-size: 40px;
-    }
-  }
-
-/*desktop en groter*/
-@media only screen
-  and (max-device-width: 1024px){
-    .container{
-      display: flex;
-      justify-content: flex-start;
-    }
-    #demo{
-      font-size: 60px;
-    }
-  }
 
 .grid {
   display: grid;
   width: 100%;
-  max-width: 719px;
+  max-width: 667px;
   margin: 0 auto;
 
-  grid-template-columns: repeat(, 1fr);
-  grid-template-rows: 80px auto 80px;
+  grid-template-columns: repeat(, 1fr 50%);
+  grid-template-rows: 50% 50%;
   grid-gap: 20px;
 
-  grid-template-areas: "stocks   fuel"
+  grid-template-areas: "logo      logo"
+                       "stocks    fuel"
                        "counter  counter";
 }
 
 /* items */
-
 .grid div {
   color: white;
   font-size: 20px;
   padding: 20px;
-}
+  }
 
 /* specific item styles */
-
-.barChart {
-  background: #b03532;
-  grid-area: stocks;
+.item-1 {
+  /*background: #b03532;*/
+  grid-area: logo;
 }
-.dChart {
+.item-2 {
   background: #33a8a5;
-  grid-area: fuel;
+  grid-area: stocks;
+  font-family: 'Concert One', cursive;
 }
-.count {
+.item-3 {
   background: #30997a;
-  grid-area: counter;
+  grid-area: fuel;
+  font-family: 'Concert One', cursive;
 }
-/*.count {
+.item-4 {
   background: #6a478f;
   grid-area: counter;
-}*/
+  font-family: 'Concert One', cursive;
+}
+.item-5{
+  background: #00BBDD;
+  grid-area: counter;
+  font-family: 'Concert One', cursive;
+}
 
-#demo{
+#countDown{
   font-size: 60px;
   margin-top: 20px;
   display: flex;

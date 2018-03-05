@@ -2,108 +2,52 @@ body {
   padding-top: 20px;
 }
 
-/*mobile*/
-@media only screen
-  and (min-width: 375px)
-  and (max-width: 719px){
-    .grid {
-      display: grid;
-      width: 100%;
-      max-width: 719px;
-      margin: 0 auto;
+.grid {
+  display: grid;
+  width: 100%;
+  max-width: 719px;
+  margin: 0 auto;
 
-      grid-template-columns: repeat(, 1fr);
-      grid-template-rows: 80px auto 80px;
-      grid-gap: 20px;
+  grid-template-columns: repeat(, 1fr 50%);
+  grid-template-rows: 50% 50%;
+  grid-gap: 20px;
 
-      grid-template-areas: "logo"
-                           "stocks"
-                           "fuel"
-                           "counter";
-    }
-    .grid div {
-      color: white;
-      font-size: 20px;
-      padding: 20px;
-      }
-    .item-1 {
-      grid-area: logo;
-    }
-    .item-2 {
-      background: #33a8a5;
-      grid-area: stocks;
-      font-family: 'Concert One', cursive;
-    }
-    .item-3 {
-      background: #30997a;
-      grid-area: fuel;
-      font-family: 'Concert One', cursive;
-    }
-    .item-4 {
-      background: #6a478f;
-      grid-area: counter;
-      font-family: 'Concert One', cursive;
-    }
-    .item-5{
-      background: #00BBDD;
-      grid-area: counter;
-      font-family: 'Concert One', cursive;
-    }
-    #countDown{
-      font-size: 20px;
-    }
+  grid-template-areas: "logo      logo"
+                       "stocks    fuel"
+                       "counter  counter";
+}
+
+/* items */
+.grid div {
+  color: white;
+  font-size: 20px;
+  padding: 20px;
   }
 
-/*tablet*/
-@media only screen
-  and (min-width: 720px)
-  and (max-width: 1023px){
-    .grid {
-      display: grid;
-      width: 100%;
-      max-width: 1023px;
-      margin: 0 auto;
-
-      grid-template-columns: repeat(, 1fr 50%);
-      grid-template-rows: 50% 50%;
-      grid-gap: 20px;
-
-      grid-template-areas: "logo      logo"
-                           "stocks    fuel"
-                           "counter  counter";
-    }
-    .grid div {
-      color: white;
-      font-size: 20px;
-      padding: 20px;
-      }
-    .item-1 {
-      grid-area: logo;
-    }
-    .item-2 {
-      background: #33a8a5;
-      grid-area: stocks;
-      font-family: 'Concert One', cursive;
-    }
-    .item-3 {
-      background: #30997a;
-      grid-area: fuel;
-      font-family: 'Concert One', cursive;
-    }
-    .item-4 {
-      background: #6a478f;
-      grid-area: counter;
-      font-family: 'Concert One', cursive;
-    }
-    .item-5{
-      background: #00BBDD;
-      grid-area: counter;
-      font-family: 'Concert One', cursive;
-    }
-    #countDown{
-      font-size: 40px;
-    }
-  }
+/* specific item styles */
+.item-1 {
+  grid-area: logo;
+}
+.item-2 {
+  background: #33a8a5;
+  grid-area: stocks;
+  font-family: 'Concert One', cursive;
+}
+.item-3 {
+  background: #30997a;
+  grid-area: fuel;
+  font-family: 'Concert One', cursive;
+}
+.item-4 {
+  background: #6a478f;
+  grid-area: counter;
+  font-family: 'Concert One', cursive;
+}
+.item-5{
+  background: #00BBDD;
+  grid-area: counter;
+  font-family: 'Concert One', cursive;
+}
 
 /*desktop en groter*/
 @media only screen
@@ -155,53 +99,108 @@ body {
     }
   }
 
-.grid {
-  display: grid;
-  width: 100%;
-  max-width: 719px;
-  margin: 0 auto;
+  /*tablet*/
+  @media only screen
+    and (min-width: 720px)
+    and (max-width: 1023px){
+      .grid {
+        display: grid;
+        width: 100%;
+        max-width: 1023px;
+        margin: 0 auto;
 
-  grid-template-columns: repeat(, 1fr 50%);
-  grid-template-rows: 50% 50%;
-  grid-gap: 20px;
+        grid-template-columns: repeat(, 1fr 50%);
+        grid-template-rows: 50% 50%;
+        grid-gap: 20px;
 
-  grid-template-areas: "logo      logo"
-                       "stocks    fuel"
-                       "counter  counter";
-}
+        grid-template-areas: "logo      logo"
+                             "stocks    fuel"
+                             "counter  counter";
+      }
+      .grid div {
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+        }
+      .item-1 {
+        grid-area: logo;
+      }
+      .item-2 {
+        background: #33a8a5;
+        grid-area: stocks;
+        font-family: 'Concert One', cursive;
+      }
+      .item-3 {
+        background: #30997a;
+        grid-area: fuel;
+        font-family: 'Concert One', cursive;
+      }
+      .item-4 {
+        background: #6a478f;
+        grid-area: counter;
+        font-family: 'Concert One', cursive;
+      }
+      .item-5{
+        background: #00BBDD;
+        grid-area: counter;
+        font-family: 'Concert One', cursive;
+      }
+      #countDown{
+        font-size: 40px;
+      }
+    }
 
-/* items */
-.grid div {
-  color: white;
-  font-size: 20px;
-  padding: 20px;
+/*mobile*/
+@media only screen
+  and (min-width: 375px)
+  and (max-width: 719px){
+    .grid {
+      display: grid;
+      width: 100%;
+      max-width: 719px;
+      margin: 0 auto;
+
+      grid-template-columns: repeat(, 1fr);
+      grid-template-rows: 80px auto 80px;
+      grid-gap: 20px;
+
+      grid-template-areas: "logo"
+                           "stocks"
+                           "fuel"
+                           "counter";
+    }
+    .grid div {
+      color: white;
+      font-size: 20px;
+      padding: 20px;
+      }
+    .item-1 {
+      grid-area: logo;
+    }
+    .item-2 {
+      background: #33a8a5;
+      grid-area: stocks;
+      font-family: 'Concert One', cursive;
+    }
+    .item-3 {
+      background: #30997a;
+      grid-area: fuel;
+      font-family: 'Concert One', cursive;
+    }
+    .item-4 {
+      background: #6a478f;
+      grid-area: counter;
+      font-family: 'Concert One', cursive;
+    }
+    .item-5{
+      background: #00BBDD;
+      grid-area: counter;
+      font-family: 'Concert One', cursive;
+    }
+    #countDown{
+      font-size: 20px;
+    }
   }
-
-/* specific item styles */
-.item-1 {
-  /*background: #b03532;*/
-  grid-area: logo;
-}
-.item-2 {
-  background: #33a8a5;
-  grid-area: stocks;
-  font-family: 'Concert One', cursive;
-}
-.item-3 {
-  background: #30997a;
-  grid-area: fuel;
-  font-family: 'Concert One', cursive;
-}
-.item-4 {
-  background: #6a478f;
-  grid-area: counter;
-  font-family: 'Concert One', cursive;
-}
-.item-5{
-  background: #00BBDD;
-  grid-area: counter;
-  font-family: 'Concert One', cursive;
-}
 
 #countDown{
   font-size: 60px;
